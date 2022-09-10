@@ -7,6 +7,12 @@ clone repository
 
 copy .env.example to .env
 
+Add database credentials into .env
+
+DB_USERNAME=
+
+DB_PASSWORD=
+
 run below commands
 
 composer install
