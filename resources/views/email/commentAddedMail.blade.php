@@ -1,0 +1,1 @@
+<div>{{ $content['comment'] }}</div>

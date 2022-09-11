@@ -33,4 +33,8 @@ class PostsController extends Controller
             return redirect()->back()->with('error', 'Please provide '.$errorOf.' to post!');
         }
     }
+    public function postDetails($id){  
+        $userPosts =  Post::where('id',$id)->with('comments')->first();
+        return view('postDetails',compact('userPosts'));
+    }
 }

@@ -23,6 +23,7 @@ Route::group(['middleware' => 'auth'], function()
     Route::get('/dashboard',    'App\Http\Controllers\PostsController@index')                ->name('dashboard');
     Route::get('/post/create',  'App\Http\Controllers\PostsController@create')               ->name('createPosts');
     Route::post('/post/add',    'App\Http\Controllers\PostsController@createUserPosts')      ->name('addPost');
+    Route::get('/post/details/{id}', 'App\Http\Controllers\PostsController@postDetails')     ->name('postDetails');
     Route::post('/comment/add', 'App\Http\Controllers\CommentsController@createPostComment') ->name('addComments');
 });
   
